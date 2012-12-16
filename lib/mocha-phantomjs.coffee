@@ -52,6 +52,10 @@ class Reporter
       @page.addCookie
         name: name
         value: value
+      phantom.addCookie
+        name: name
+        value: value
+        domain: 'localhost'
     @page.viewportSize = @config.viewportSize if @config.viewportSize
 
     @page.onConsoleMessage = (msg) -> console.log msg
